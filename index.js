@@ -29,8 +29,8 @@ const options = {
   replset: {socketOptions: {keepAlive: 300000, connectTimeoutMS: 30000}}
 }
 
-mongoose.connect(mongoUrl, options);
-let conn = mongoose.connection;
+mongoose.connect(mongoUrl, options)
+let conn = mongoose.connection
 conn.on('error', console.error.bind(console, 'connection error:'));
 
 conn.once('open', function () {
