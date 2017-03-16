@@ -15,7 +15,14 @@ const { mongoUrl } = require('./config/database')
 let app = express()
 
 // MongoDB connection
-mongoose.connect(mongoUrl)
+mongoose.connect(mongoUrl, {
+  server: {
+    socketOptions: {
+      socketTimeoutMS: 0,
+      connectionTimeout: 0
+    }
+  }
+})
 
 app.use(helmet())
 
@@ -32,7 +39,7 @@ app.use(morgan('dev'))
 
 app.use('/api', router)
 
-app.listen(3000, function () {
-  console.log('server is listening on 3000...')
+app.listen(8080, function () {
+  console.log('server is listening on 8080...')
 })
 

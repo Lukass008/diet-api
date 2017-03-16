@@ -5,7 +5,6 @@ const addNewUser = require('../lib/diet/user/addNewUser')
 const userModel = require('../lib/diet/models/mongoose/user.mongoose.model.js')
 const authenticateuser = require('../lib/diet/user/authenticate')
 const checkJWT = require('../lib/diet/user/authenticateJWT')
-const data = require('../tmp/data_json/data-to-db')
 
 router.use('/authenticate', authenticateuser)
 
