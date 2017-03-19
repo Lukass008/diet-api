@@ -1,0 +1,25 @@
+{
+  "db": {
+    "url": "mongodb://public:asd123@ds159517.mlab.com:59517/diet_api",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 300000,
+          "connectTimeoutMS": 30000
+        }
+      },
+      "replset": {
+        "socketOptions": {
+          "keepAlive": 300000,
+          "connectTimeoutMS": 30000
+        }
+      }
+    }
+  },
+  "security": {
+    "jwt": {
+      "secret": "verymostbesttoken",
+      "expireAfterSeconds": 21600
+    }
+  }
+}
